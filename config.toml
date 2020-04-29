@@ -1,0 +1,4 @@
+baseURL = "https://dym.li/"
+languageCode = "en-us"
+title = "dym.li"
+theme = "origin"
