@@ -1,0 +1,16 @@
+{{ if $.Page.Params.mermaid }} 
+<script src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    mermaid.initialize({ 
+        theme: 'dark',
+        themeCSS: '',
+        cloneCssStyles: false,
+        useMaxWidth: true,
+        htmlLabels: false,
+        flowchart: { 
+                curve: 'basis' 
+        }
+    });
+</script>
+<pre class="mermaid" align="{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}">{{ safeHTML .Inner }}</pre>
+{{ end }}
